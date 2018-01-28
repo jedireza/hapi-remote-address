@@ -1,0 +1,30 @@
+{
+  "name": "hapi-remote-address",
+  "version": "0.0.0",
+  "description": "Provides `request.remoteAddress` with support for X-Forwarded-For headers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -c -L"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jedireza/hapi-remote-address.git"
+  },
+  "keywords": [
+    "hapi",
+    "hapijs",
+    "x-forwarded-for",
+    "remote-addr",
+    "load-balancer"
+  ],
+  "author": "Reza Akhavan <jedireza@gmail.com> (http://reza.akhavan.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jedireza/hapi-remote-address/issues"
+  },
+  "devDependencies": {
+    "code": "5.x.x",
+    "hapi": "17.x.x",
+    "lab": "15.x.x"
+  }
+}
