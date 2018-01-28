@@ -1,6 +1,6 @@
 {
   "name": "hapi-remote-address",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Provides `request.remoteAddress` with support for X-Forwarded-For headers.",
   "main": "index.js",
   "scripts": {
