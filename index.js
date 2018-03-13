@@ -5,7 +5,9 @@ const register = function (server, options) {
 
     const getRemoteAddress = function (request) {
 
-        return request.headers['x-forwarded-for'] || request.info.remoteAddress;
+        const xFF = request.headers['x-forwarded-for'];
+
+        return xFF ? xFF.split(',')[0].trim() : request.info.remoteAddress;
     };
 
     server.decorate('request', 'remoteAddress', getRemoteAddress, { apply: true });

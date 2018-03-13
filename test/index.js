@@ -54,4 +54,18 @@ lab.experiment('HapiRemoteAddress', () => {
 
         Code.expect(response.request.remoteAddress).to.equal('192.168.0.1');
     });
+
+    lab.test('it decorates the request with `remoteAddress` (x-forwarded-for with comma separated value)', async () => {
+
+        const response = await server.inject({
+            method: 'GET',
+            url: '/',
+            remoteAddress: '127.0.0.1',
+            headers: {
+                'x-forwarded-for': '192.168.0.1, 192.168.0.2'
+            }
+        });
+
+        Code.expect(response.request.remoteAddress).to.equal('192.168.0.1');
+    });
 });
